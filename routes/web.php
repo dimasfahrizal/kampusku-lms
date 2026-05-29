@@ -6,6 +6,10 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ClassEnrollmentController; // Pastikan Controller ini di-import!
 use Illuminate\Support\Facades\Route;
 
+Route::get('/buat-storage', function () {
+    \Artisan::call('storage:link');
+    return 'Jembatan folder storage berhasil dibuat dengan sukses!';
+});
 // ==========================================
 // 1. RUTE HALAMAN UTAMA (KAMPUSKU)
 // ==========================================
@@ -47,10 +51,6 @@ Route::middleware(['auth', 'verified'])->group(function () {
         // Contoh: Route::get('/dosen/rekap-nilai', [DosenController::class, 'rekap'])->name('dosen.rekap');
     });
 
-    Route::get('/buat-storage', function () {
-        \Artisan::call('storage:link');
-        return 'Jembatan folder storage berhasil dibuat dengan sukses!';
-    });
 });
 
 // Memanggil rute Login, Register, Logout dari Laravel Breeze
