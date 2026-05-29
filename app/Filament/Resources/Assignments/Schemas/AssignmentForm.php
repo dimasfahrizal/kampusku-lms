@@ -38,6 +38,8 @@ class AssignmentForm
                 
             FileUpload::make('attachment')
                 ->label('File Dokumen Tugas (Opsional)')
+                ->disk('public')
+                ->directory('assignments')
                 ->visible(fn (callable $get) => $get('type') === 'file'),
 
             MarkdownEditor::make('description')

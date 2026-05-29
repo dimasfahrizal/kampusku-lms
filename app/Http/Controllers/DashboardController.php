@@ -83,7 +83,6 @@ class DashboardController extends Controller
     {
         // Memastikan mata kuliah tugas ini memang diikuti oleh mahasiswa yang sedang login
         return view('student.assignments.show', compact('assignment'));
-        return view('student.assignments.show', compact('assignment'));
     }
 
     public function submitAssignment(Request $request, Assignment $assignment)
