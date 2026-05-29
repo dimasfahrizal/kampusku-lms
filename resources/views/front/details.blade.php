@@ -16,7 +16,7 @@
     <main class="container mx-auto px-4 pb-20">
         <div class="bg-white rounded-xl shadow-lg p-8">
             <div class="flex flex-col md:flex-row gap-8">
-                <img src="{{ asset('storage/' . $course->thumbnail) }}" class="w-full md:w-1/3 rounded-lg object-cover h-64" alt="{{ $course->name }}">
+                <img src="{{ asset('storage/app/public' . $course->thumbnail) }}" class="w-full md:w-1/3 rounded-lg object-cover h-64" alt="{{ $course->name }}">
                 
                 <div class="flex-1">
                     <span class="bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full text-sm font-semibold">

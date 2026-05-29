@@ -41,7 +41,7 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             @foreach($courses as $course)
             <div class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 hover:shadow-lg transition">
-                <img src="{{ $course->thumbnail ? asset('storage/' . $course->thumbnail) : 'https://via.placeholder.com/400x200?text=No+Image' }}" 
+                <img src="{{ $course->thumbnail ? asset('storage/app/public' . $course->thumbnail) : 'https://via.placeholder.com/400x200?text=No+Image' }}" 
                      alt="{{ $course->name }}" 
                      class="h-48 w-full object-cover"
                      onerror="this.src='https://via.placeholder.com/400x200?text=Gambar+Tidak+Ditemukan'">
