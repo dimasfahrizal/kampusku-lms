@@ -46,6 +46,11 @@ Route::middleware(['auth', 'verified'])->group(function () {
         // Taruh rute murni khusus dosen di sini jika ada halaman kustom di luar Filament.
         // Contoh: Route::get('/dosen/rekap-nilai', [DosenController::class, 'rekap'])->name('dosen.rekap');
     });
+
+    Route::get('/buat-storage', function () {
+        \Artisan::call('storage:link');
+        return 'Jembatan folder storage berhasil dibuat dengan sukses!';
+    });
 });
 
 // Memanggil rute Login, Register, Logout dari Laravel Breeze
